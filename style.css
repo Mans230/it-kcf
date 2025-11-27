@@ -1,0 +1,84 @@
+/* إعدادات عامة للصفحة */
+body {
+    background-color: #f0f2f5; /* لون رصاصي فاتح جداً للخلفية */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* خط نظيف وحديث */
+    margin: 0;
+    padding: 0;
+    color: #333; /* لون الخط رصاصي غامق ليكون مريحاً للقراءة */
+    text-align: center; /* توسيط النصوص بشكل عام */
+}
+
+/* تنسيق شريط التنقل (Nav) */
+header {
+    margin-top: 30px; /* مسافة من أعلى الصفحة */
+}
+
+nav {
+    background-color: #ffffff; /* لون المستطيل أبيض */
+    display: inline-block; /* يجعل المستطيل بحجم الكلام فقط وليس بعرض الشاشة */
+    padding: 15px 40px; /* مساحات داخلية للمستطيل */
+    border-radius: 50px; /* حواف دائرية ناعمة */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* ظل خفيف لإبراز المستطيل */
+}
+
+/* تنسيق الروابط داخل الـ Nav */
+nav a {
+    text-decoration: none; /* إزالة الخط الموجود تحت الكلام */
+    color: #555; /* لون رصاصي متوسط */
+    font-weight: bold;
+    margin: 0 15px; /* مسافات بين كل كلمة والأخرى */
+    transition: 0.3s; /* نعومة عند مرور الماوس */
+}
+
+nav a:hover {
+    color: #000; /* يتحول للأسود عند مرور الماوس */
+}
+
+/* إخفاء الخط الفاصل القديم لأنه لم يعد له داعي مع التصميم الجديد */
+header hr {
+    display: none;
+}
+
+/* تنسيق المحتوى الرئيسي (Main) */
+main {
+    background-color: #ffffff; /* خلفية بيضاء للمحتوى */
+    width: 80%; /* عرض المحتوى */
+    max-width: 800px; /* أقصى عرض حتى لا يتمدد كثيراً في الشاشات الكبيرة */
+    margin: 40px auto; /* توسيط المحتوى في منتصف الشاشة */
+    padding: 40px;
+    border-radius: 15px; /* حواف دائرية */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05); /* ظل خفيف جداً */
+}
+
+/* تنسيق الفورم (Forms) لصفحات الدخول والتسجيل */
+input[type="text"], 
+input[type="email"], 
+input[type="password"] {
+    width: 70%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fafafa;
+}
+
+button {
+    background-color: #4a4a4a; /* زر لونه رصاصي غامق */
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #222; /* تغميق اللون عند الضغط */
+}
+
+/* تنسيق الصور والفيديو */
+img, video {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+}
