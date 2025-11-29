@@ -1,0 +1,266 @@
+
+
+
+
+/* إعدادات عامة للصفحة */
+body { 
+    background-color: #f0f2f5; /* لون رصاصي فاتح جداً للخلفية */
+    background-image: url(https://files.catbox.moe/r50ctl.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0%;
+    padding: 0;
+    color: #333; /* لون الخط رصاصي غامق ليكون مريحاً للقراءة */
+    text-align: center;/* توسيط النصوص بشكل عام */
+}
+
+/* تنسيق شريط التنقل (Nav) */
+header {
+    margin-top: 20px; /* مسافة من أعلى الصفحة */
+}
+
+nav {
+    background-color: #ffffff; /* لون المستطيل أبيض */
+    display: inline-block; /* يجعل المستطيل بحجم الكلام فقط وليس بعرض الشاشة */
+    padding: 15px 40px; /* مساحات داخلية للمستطيل */
+    border-radius: 50px; /* حواف دائرية ناعمة */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* ظل خفيف لإبراز المستطيل */
+}
+
+/* تنسيق الروابط داخل الـ Nav */
+nav a {
+    text-decoration: none; /* إزالة الخط الموجود تحت الكلام */ 
+    color: #555; /* لون رصاصي متوسط */
+    font-weight: bold;
+    margin: 0 15px; /* مسافات بين كل كلمة والأخرى */
+    transition: 0.5; /* نعومة عند مرور الماوس */
+}
+
+nav a:hover {
+    color: #000; /* يتحول للأسود عند مرور الماوس */
+}
+
+/* إخفاء الخط الفاصل القديم لأنه لم يعد له داعي مع التصميم الجديد */
+header hr {
+    display: none ;
+}
+
+/* تنسيق المحتوى الرئيسي (Main) */
+main {
+    background-color: #f9f9f9; /* خلفية بيضاء للمحتوى */
+    width: 80%; /* عرض المحتوى */
+    max-width: 800px; /* أقصى عرض حتى لا يتمدد كثيراً في الشاشات الكبيرة */
+    margin: 40px auto; /* توسيط المحتوى في منتصف الشاشة */
+    padding: 40px;
+    border-radius: 15px; /* حواف دائرية */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05); /* ظل خفيف جداً */
+}
+
+/* تنسيق الفورم (Forms) لصفحات الدخول والتسجيل */
+input[type="text"], 
+input[type="email"], 
+input[type="password"] {
+    width: 70%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fafafa;
+}
+
+button {
+    background-color: #4a4a4a; /* زر لونه رصاصي غامق */
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #222; /* تغميق اللون عند الضغط */
+}
+
+/* تنسيق الصور والفيديو */
+img, video {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+/* تنسيق حاوية الصور عشان يجوا جنب بعض */
+.gallery {
+    display: flex;          /* رص العناصر بجانب بعض */
+    justify-content: center; /* توسيط العناصر */
+    flex-wrap: wrap;        /* لو الشاشة صغرت، انزل للسطر اللي بعده */
+    gap: 20px;              /* مسافات بين الكروت */
+    margin-top: 30px;
+}
+
+/* تنسيق الكارت الواحد */
+.card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;    /* حواف دائرية للكارت */
+    width: 200px;           /* عرض ثابت للكارت */
+    overflow: hidden;       /* عشان الصورة لوتخطت الحدود تختفي */
+    transition: transform 0.3s ease; /* نعومة الحركة */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* حركة عند مرور الماوس (تكبير بسيط) */
+
+
+/* تنسيق الصورة جوه الكارت */
+.card img {
+    width: 100%;    /* املأ عرض الكارت */
+    height: 280px;  /* طول ثابت عشان الصور تكون كلها قد بعض */
+    object-fit: cover; /* قص الزيادات من الصورة بدون مط */
+}
+
+/* تنسيق الرابط عشان يشيل الخط من تحت الكلام */
+.card a {
+    text-decoration: none; 
+    color: #333;
+    display: block; /* يخلي الرابط يملأ الكارت كله */
+}
+
+.card h3 {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.hero-text {
+    background-color: rgba(0, 0, 0, 0.6); /* لون أسود شفاف بنسبة 60% */
+    color: white;
+    padding: 20px;
+    border-radius: 15px; /* حواف دائرية */
+    display: inline-block; /* عشان الصندوق يكون على قد الكلام بس */
+    margin-bottom: 20px;
+    backdrop-filter: blur(5px); /* (اختياري) بيعمل تغبيش للخلفية وراء النص */
+}
+
+body {
+    /* السطر ده هو اللي بيغير الخط */
+    font-family: 'Cairo', sans-serif ;
+  
+}
+
+
+/* تنسيق حاوية الأيقونات */
+.social-links {
+    margin-top: 25px;
+    text-align: center;      /* توسيط الأيقونات */
+    padding: 15px;
+    border-top: 1px solid #eee; /* خط فاصل خفيف فوقهم */
+}
+
+.social-links h3 {
+    margin-bottom: 15px;
+    color: #555;
+    font-size: 18px;
+}
+
+/* تنسيق صور الأيقونات نفسها */
+.social-links img {
+    width: 45px;            /* حجم الأيقونة */
+    height: 45px;
+    margin: 0 10px;         /* مسافة بين كل أيقونة والتانية */
+    transition: transform 0.3s ease; /* نعومة الحركة */
+    cursor: pointer;
+}
+
+/* تنسيق حاوية الأيقونات */
+.social-links {
+    margin-top: 25px;
+    text-align: center;      /* توسيط الأيقونات */
+    padding: 15px;
+    border-top: 1px solid #eee; /* خط فاصل خفيف فوقهم */
+}
+
+.social-links h3 {
+    margin-bottom: 15px;
+    color: #555;
+    font-size: 18px;
+}
+
+/* تنسيق صور الأيقونات نفسها */
+.social-links img {
+    width: 45px;            /* حجم الأيقونة */
+    height: 45px;
+    margin: 0 10px;         /* مسافة بين كل أيقونة والتانية */
+    transition: transform 0.3s ease; /* نعومة الحركة */
+    cursor: pointer;
+}
+
+/* حركة عند مرور الماوس (تكبير وتغيير بسيط) */
+.social-links img:hover {
+    transform: scale(1.2) rotate(5deg); /* تكبير ولفه بسيطة */
+    filter: drop-shadow(0 5px 5px rgba(0,0,0,0.3)); /* ظل يظهر لما تقف عليها */
+}
+
+
+/* تنسيق قسم عن الموقع */
+.about-section {
+    margin-bottom: 30px;
+    line-height: 1.8; /* تباعد بين السطور للقراءة المريحة */
+}
+
+/* تنسيق صورة المطور */
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; /* يخلي الصورة دائرية */
+    border: 3px solid #ddd;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* حاوية المعلومات */
+.info-container {
+    text-align: right; /* محاذاة لليمين عشان العربي */
+    width: 80%;
+    margin: 0 auto; /* توسيط الحاوية نفسها */
+}
+
+/* السطر الواحد (الاسم + القيمة) */
+.info-row {
+    background-color: #f9f9f9; /* لون خلفية فاتح لكل سطر */
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    display: flex; 
+    justify-content: space-between; /* يرمي الاسم يمين والقيمة شمال */
+    align-items: center;
+}
+
+/* تنسيق العناوين (الاسم، الكلية...) */
+.label {
+    font-weight: bold;
+    color: #555;
+    font-size: 1.1em;
+}
+
+/* تنسيق القيمة (عبدالرحمن، جامعة كفر الشيخ...) */
+.value {
+    color: #000;
+    font-weight: 600;
+}
+
+/* مربع التواصل */
+.contact-box {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #e3f2fd; /* لون أزرق فاتح جداً */
+    border-radius: 10px;
+    border: 1px solid #bbdefb;
+    text-align: center; /* توسيط أرقام التواصل */
+}
+
+.contact-box p {
+    margin: 5px 0;
+    font-size: 1.1em;
+}
